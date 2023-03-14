@@ -1,0 +1,43 @@
+{
+  "name": "dolirate",
+  "version": "0.9.0",
+  "description": "Get currency rate for Dolibarr 17",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --watch src -e js,ts,json --exec \"node --loader ts-node/esm src/index.ts\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup src/*.ts --format cjs --clean",
+    "start": "node dist/index.js",
+    "dolibarr": "node --loader ts-node/esm  src/dolirate.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismogroup/dolirate.git"
+  },
+  "keywords": [
+    "Dolibarr"
+  ],
+  "author": "Ronan Le Meillat <ronan.le_meillat@ismo-goup.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ismogroup/dolirate/issues"
+  },
+  "homepage": "https://github.com/ismogroup/dolirate#readme",
+  "dependencies": {
+    "@sctg/currencies": "^0.9.7",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.3",
+    "nodemon": "^2.0.21",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.2",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5"
+  }
+}
