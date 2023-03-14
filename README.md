@@ -55,3 +55,10 @@ Create an .env file with the required environment variables and run the image.
 ```sh
 docker run -p 3000:3000 --env-file .vscode/env -it dolirate:latest
 ```
+
+## Full Docker stack
+See docker-compose.yml at https://github.com/ismogroup/dolidock for a complete stack with this tool.  
+A simple cron job is set in crontabui:  
+```sh
+/usr/bin/curl http://dolirate:3000/updaterates
+```
